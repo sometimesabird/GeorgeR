@@ -20,3 +20,5 @@ Suggests:
     dplyr,
     metathis,
     devtools
+URL: https://github.com/sometimesabird/GeorgeR
+BugReports: https://github.com/sometimesabird/GeorgeR/issues
