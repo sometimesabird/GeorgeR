@@ -83,11 +83,6 @@ devtools::document()
 
 # Check for issues (optional but recommended)
 devtools::check()
-
-# Commit your changes
-git add .
-git commit -m "<message>"
-
-# Push to GitHub
-git push
 ```
+
+And push to GitHub.
