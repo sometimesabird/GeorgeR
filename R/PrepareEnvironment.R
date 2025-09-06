@@ -7,7 +7,7 @@
 CheckAndUpdatePackage <- function(quiet = FALSE) {
 
   # Hard-coded GitHub repository - update this to your actual repo
-  github_repo <- "sometimesabird/GeorgeR"  # UPDATE THIS!
+  github_repo <- "sometimesabird/GeorgeR"
 
   if (!requireNamespace("devtools", quietly = TRUE)) {
     if (!quiet) message("devtools not available - skipping update check")
