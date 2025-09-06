@@ -11,7 +11,7 @@ A personal R package for standardized analysis environment setup. This package p
 if (!require("devtools")) install.packages("devtools")
 
 # Install GeorgeR from GitHub
-devtools::install_github("sometimesabird/GeorgeR")  # UPDATE: Replace with your actual GitHub username
+devtools::install_github("sometimesabird/GeorgeR")
 ```
 
 ### Loading the Package
