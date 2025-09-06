@@ -4,12 +4,9 @@
 \alias{PrepareEnvironment}
 \title{Prepare Environment for Analysis}
 \usage{
-PrepareEnvironment(rmarkdown, fig.dims = NULL, update = FALSE, quiet = FALSE)
+PrepareEnvironment(fig.dims = NULL, update = FALSE, quiet = FALSE)
 }
 \arguments{
-\item{rmarkdown}{Logical. TRUE if file is an Rmarkdown document,
-FALSE if it is a regular script}
-
 \item{fig.dims}{Numeric vector of length 2. For Rmarkdown you can pass
 a vector of (width, height) for default size of figures in a chunk.
 Default is NULL.}
@@ -30,12 +27,12 @@ the environment for both R scripts and R Markdown documents.
 \examples{
 \dontrun{
 # For R Markdown with auto-updates
-PrepareEnvironment(rmarkdown = TRUE, fig.dims = c(8, 6), update = TRUE)
+PrepareEnvironment(fig.dims = c(8, 6), update = TRUE)
 
 # For regular R scripts without auto-updates
-PrepareEnvironment(rmarkdown = FALSE, update = FALSE)
+PrepareEnvironment(update = FALSE)
 
 # Quiet updates
-PrepareEnvironment(rmarkdown = TRUE, update = TRUE, quiet = TRUE)
+PrepareEnvironment(update = TRUE, quiet = TRUE)
 }
 }

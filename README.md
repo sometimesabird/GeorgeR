@@ -27,28 +27,26 @@ library(GeorgeR)
 The main function is `PrepareEnvironment()`, which sets up your analysis environment:
 
 ```r
-# For R Markdown documents
-PrepareEnvironment(rmarkdown = TRUE)
+# Simplest case
+PrepareEnvironment()
 
-# For regular R scripts
-PrepareEnvironment(rmarkdown = FALSE)
+# Simple but you want to update it to the latest version before loading
+PrepareEnvironment(update = TRUE)
 
 # For R Markdown with custom figure dimensions
-PrepareEnvironment(rmarkdown = TRUE, fig.dims = c(10, 6))
+PrepareEnvironment(fig.dims = c(10, 6))
 ```
 
 ### What PrepareEnvironment() Does
 
 When you call `PrepareEnvironment()`:
 
-1. **Always**: Sources your `src/load_data.R` file (make sure this exists in your project)
-2. **For R Markdown** (`rmarkdown = TRUE`):
+1. Sources your `src/load_data.R` file (make sure this exists in your project)
+2. Preps RMarkdown (binds when you knit an RMarkdown document:
    - Sets up chunk options (no echo, caching enabled, custom paths)
    - Configures figure and cache directories based on your file name
    - Sets up meta tags (if meta package available)
    - Suppresses dplyr summarise messages
-3. **For Scripts** (`rmarkdown = FALSE`):
-   - Just loads your data and environment
 
 ### Automatic Updates
 
@@ -56,13 +54,11 @@ To automatically check for and install package updates:
 
 ```r
 # Check for updates and install if available
-PrepareEnvironment(rmarkdown = TRUE, update = TRUE)
+PrepareEnvironment(update = TRUE)
 
 # Quiet updates (no messages)
-PrepareEnvironment(rmarkdown = TRUE, update = TRUE, quiet = TRUE)
+PrepareEnvironment(update = TRUE, quiet = TRUE)
 ```
-
-**Note**: After an update is installed, you'll need to restart your R session to use the new version.
 
 
 # Notes to Self
